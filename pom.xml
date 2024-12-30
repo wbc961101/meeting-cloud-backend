@@ -30,6 +30,8 @@
         <mapstruct.version>1.5.3.Final</mapstruct.version>
         <netty-handler.version>4.1.109.Final</netty-handler.version>
         <reactor-netty.version>1.1.20</reactor-netty.version>
+        <fastjson2.version>2.0.51</fastjson2.version>
+        <commons-lang3.version>3.14.0</commons-lang3.version>
     </properties>
 
     <dependencyManagement>
@@ -113,6 +115,16 @@
                 <version>${reactor-netty.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>com.alibaba.fastjson2</groupId>
+                <artifactId>fastjson2</artifactId>
+                <version>${fastjson2.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang3.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
