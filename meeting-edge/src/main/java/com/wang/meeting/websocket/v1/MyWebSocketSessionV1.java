@@ -66,9 +66,11 @@ public class MyWebSocketSessionV1 extends BaseWebSocketSession {
         log.info(text);
         if (StringUtil.isNullOrEmpty(text)) {
             session.send(Mono.just(session.textMessage("empty message."))).subscribe();
+            return;
         }
         if ("ping".equals(text)) {
-            session.send(Mono.just(session.textMessage("pong")));
+            session.send(Mono.just(session.textMessage("pong"))).subscribe();
+            return;
         }
         MeetingRequest meetingRequest = null;
         try {
