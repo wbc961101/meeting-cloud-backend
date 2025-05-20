@@ -63,6 +63,7 @@ public class MyWebSocketSessionV1 extends BaseWebSocketSession {
 
     private void handleUpMessage(WebSocketMessage webSocketMessage) {
         String text = webSocketMessage.getPayloadAsText();
+        log.info(text);
         if (StringUtil.isNullOrEmpty(text)) {
             session.send(Mono.just(session.textMessage("empty message."))).subscribe();
         }
